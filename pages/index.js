@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { weatherCodes } from "../services/weatherCodes";
+import { weatherCodes, weatherIcons } from "../services/weatherCodes";
 import { MainCard } from "../components/MainCard";
 import { ContentBox } from "../components/ContentBox";
 import { Header } from "../components/Header";
@@ -39,6 +40,7 @@ export const App = () => {
         city={weatherData.cityName}
         country={weatherData.country}
         description={weatherCodes[weatherData.current.weathercode]}
+        iconName={weatherIcons[weatherData.current.weathercode][weatherData.current.is_day ? "day" : "night"]}
         unitSystem={unitSystem}
         weatherData={weatherData}
       />
