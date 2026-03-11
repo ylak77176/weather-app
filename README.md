@@ -45,7 +45,7 @@ No API key required — powered by [Open-Meteo](https://open-meteo.com/)
 
 ## Contributions
 
-Any feature requests and pull requests are welcome!
+This is a test project, don't pull or request please !
 
 ## License
 
