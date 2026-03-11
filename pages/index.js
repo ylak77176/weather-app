@@ -37,6 +37,7 @@ export const App = () => {
     <div className={styles.wrapper}>
       <MainCard
         city={weatherData.cityName}
+        country={weatherData.country}
         description={weatherData.current.weathercode}
         unitSystem={unitSystem}
         weatherData={weatherData}
