@@ -6,7 +6,7 @@ Check the current weather on any city on the planet. Switch between metric and i
 
 ## Features
 
-1. User's ability to search cities
+1. Change city via `config.json`
 
 2. Current local time and date
 
@@ -18,25 +18,30 @@ Check the current weather on any city on the planet. Switch between metric and i
 
 6. Metric vs Imperial system
 
-7. Error handling and loading info
+7. Visibility
+
+8. Error handling and loading info
+
+9. Auto data refresh every hour
 
 ## Installation
 
-1. `git clone https://github.com/madzadev/weather-app.git`
+1. `git clone https://github.dev/ylak77176/weather-app.git`
 
 2. `cd weather-app`
 
 3. `npm install`
 
-4. Log-in to [Openweathermap.com](https://openweathermap.org/)
+4. Edit `config.json` with city name:
+```json
+{
+  "city": "Savigny-le-Temple"
+}
+```
 
-5. Create an API key
+5. `npm run dev`
 
-6. `cp .env.example .env.local`
-
-7. Paste API key for `OPENWEATHER_API_KEY`
-
-8. `npm run dev`
+No API key required — powered by [Open-Meteo](https://open-meteo.com/)
 
 ## Contributions
 
