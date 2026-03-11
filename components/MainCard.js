@@ -1,10 +1,12 @@
 import { ctoF } from "../services/converters";
 import styles from "./MainCard.module.css";
+import Image from "next/image";
 
 export const MainCard = ({
   city,
   country,
   description,
+  iconName,
   unitSystem,
   weatherData,
 }) => {
@@ -14,6 +16,7 @@ export const MainCard = ({
         {city}, {country}
       </h1>
       <p className={styles.description}>{description}</p>
+      <Image src={`/icons/${iconName}.svg`} alt="weatherIcon" width={300} height={300}/>
       <h1 className={styles.temperature}>
         {unitSystem == "metric"
           ? Math.round(weatherData.current.temperature_2m)
