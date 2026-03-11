@@ -12,7 +12,7 @@ export default async function handler(req, res) {
 
   // Step 2 - fetch weather with coordinates
   const weatherRes = await fetch(
-    `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,apparent_temperature,weathercode,relative_humidity_2m,wind_speed_10m,wind_direction_10m&daily=sunrise,sunset, time&hourly=visibility&timezone=auto`
+    `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,apparent_temperature,weathercode,relative_humidity_2m,wind_speed_10m,wind_direction_10m&daily=sunrise,sunset&hourly=visibility&timezone=auto`
   );
   const data = await weatherRes.json();
   res.status(200).json({ ...data, cityName: city, country: country_code });
