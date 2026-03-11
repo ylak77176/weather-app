@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { weatherCodes } from "../services/weatherCodes";
 import { weatherCodes, weatherIcons } from "../services/weatherCodes";
 import { MainCard } from "../components/MainCard";
 import { ContentBox } from "../components/ContentBox";
