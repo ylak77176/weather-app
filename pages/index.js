@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import { weatherCodes } from "../services/weatherCodes";
 import { MainCard } from "../components/MainCard";
 import { ContentBox } from "../components/ContentBox";
 import { Header } from "../components/Header";
@@ -38,7 +38,7 @@ export const App = () => {
       <MainCard
         city={weatherData.cityName}
         country={weatherData.country}
-        description={weatherData.current.weathercode}
+        description={weatherCodes[weatherData.current.weathercode]}
         unitSystem={unitSystem}
         weatherData={weatherData}
       />
